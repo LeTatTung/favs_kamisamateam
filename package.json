@@ -1,5 +1,7 @@
 {
   "name": "favs_kamisammateam",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "jquery": "2"
+  }
 }

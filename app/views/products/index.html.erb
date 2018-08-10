@@ -3,7 +3,29 @@
   <span>作物リスト</span>
 </h2>
 <p class="sec-disc">お求めやすい少量パック。1人暮らしの方にも最適。</p>
+
+
 <div class="area-contents section js-tab-content tab-content" id="cropstab">
+  <div class="js-tabs tabs tabs-crops-list">
+    <ul class="js-tabs tab-nav">
+      <li>
+      <div class="tab js-tab is-active">すべて</div>
+      </li>
+        <li>
+          <div class="tab js-tab">野菜</div>
+        </li>
+        <li>
+          <div class="tab js-tab">フルーツ</div>
+        </li>
+        <li>
+          <div class="tab js-tab">米・雑穀</div>
+        </li>
+        <li>
+          <div class="tab js-tab is-disabled">花・茶</div>
+        </li>
+    </ul>
+  </div>
+  <hr>
   <ul class="row3 media-list crops-list">
     <% @products.each do |product| %>
       <li class="col">
