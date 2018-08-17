@@ -1,0 +1,32 @@
+<%= form_with(model: image_comment, local: true) do |form| %>
+  <% if image_comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(image_comment.errors.count, "error") %> prohibited this image_comment from being saved:</h2>
+
+      <ul>
+      <% image_comment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image_id %>
+    <%= form.text_field :image_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :comment %>
+    <%= form.text_field :comment %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
