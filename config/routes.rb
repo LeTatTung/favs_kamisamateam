@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   resources :comments do
     resources :reply_comments, except: :show
   end
+  get 'search', to: "pages#index", as: :search
 end

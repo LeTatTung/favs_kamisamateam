@@ -11,7 +11,7 @@
           <div class="itemdata"></div>
           <div class="media-vertical media-thumb">
               <figure class="media-object">
-                <div class="image-name"><%= image_name = farmer.avatar %></div>
+                <div class="image-name"><%= image_name = farmer.name %></div>
                 <%= link_to image_tag(image_name), user_path(farmer) %>
                 <figcaption class="media-caption"><b><%= farmer.name %>さん</b>
                 </figcaption>

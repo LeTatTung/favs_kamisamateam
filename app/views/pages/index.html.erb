@@ -1,0 +1,11 @@
+<% @farmers.each do |farmer| %>
+  <%= farmer.name %>
+  <%= link_to(farmer.name, user_path(farmer)) %>
+  <br/>
+<% end %>
+
+<% @posts.each do |post| %>
+  <%= post.title %>
+  <%= link_to(post.title, post_path(post)) %>
+  <br/>
+<% end %>

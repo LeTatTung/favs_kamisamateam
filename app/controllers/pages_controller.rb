@@ -1,6 +1,14 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!
   before_action :load_data, only: [:show]
+  
+  def index
+     
+    # @q = User.ransack(name_cont: params[:q])
+    # @farmers = @q.result(distinct: true)
+    @farmers = User.ransack(name_cont: params[:q]).result(distinct: true)
+    @posts = Post.ransack(title_cont: params[:q]).result(distinct: true)
+  end
 
   def show
     if valid_page?

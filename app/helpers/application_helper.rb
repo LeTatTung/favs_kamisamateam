@@ -10,7 +10,7 @@ module ApplicationHelper
 
   def avatar_profile user
     if user
-      @avatar = user.avatar
+      @avatar = user.avatar.url
       if user && @avatar
         @avatar
       else
