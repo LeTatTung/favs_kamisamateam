@@ -2,12 +2,35 @@
 <h2 class="sec-head" id="sc-grp7">
   <span><%= t "main.list.product" %></span>
 </h2>
-<p class="sec-disc"><%= t "main.outline.product" %></p>
 <div class="area-contents section js-tab-content tab-content" id="cropstab">
-  <ul class="row3 media-list crops-list">
-    <% @products.each do |product| %>
-      <%= render "products/product",  product: product %>
-    <% end %>
-    <%= will_paginate @products, renderer: BootstrapPagination::Rails %>
-  </ul>
+  <div class="js-tabs tabs tabs-crops-list">
+    <ul class="js-tabs tab-nav">
+      <li>
+        <div class="tab js-tab is-active">
+          <%= link_to t("category.all"), products_path, remote: true %>
+        </div>
+      </li>
+      <li>
+        <div class="tab js-tab">
+          <%= link_to t("category.vegetables"), products_path(category_id: 1), remote: true %>
+        </div>
+      </li>
+      <li>
+        <div class="tab js-tab">
+          <%= link_to t("category.fruits"), products_path(category_id: 2), remote: true %>
+        </div>
+      </li>
+      <li>
+        <div class="tab js-tab">
+          <%= link_to t("category.rice"), products_path(category_id: 3), remote: true %>
+        </div>
+      </li>
+          <div class="tab js-tab is-disabled"><%= t "category.tea" %></div>
+        </li>
+    </ul>
+  </div>
+  <br>
+  <div id="products">
+    <%= render "products/products",  products: @products %>
+  </div>
 </div>

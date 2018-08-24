@@ -31,7 +31,7 @@
               <div class="area-contents section js-tab-content tab-content" id="cropstab">
                 <ul class="row3 media-list crops-list">
                   <% @results["products"].each do |product| %>
-                    <%= render "products/product",  product: product %>
+                    <%= render "products/product_item",  product: product %>
                   <% end %>
                 </ul>
               </div>

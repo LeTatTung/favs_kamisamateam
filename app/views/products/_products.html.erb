@@ -1,0 +1,6 @@
+<ul class="row3 media-list crops-list">
+  <% products.each do |product| %>
+    <%= render "products/product_item",  product: product %>
+  <% end %>
+  <%= will_paginate products, renderer: BootstrapPagination::Rails %>
+</ul>
